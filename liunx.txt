@@ -1,0 +1,72 @@
+1：日志查询常用的命令
+ll：查询目录下所有的文件
+
+ls -lht：查询目录下所有文件的大小
+
+cd：切换不同的目录
+
+tail -100f 日志文件 打印日志后一百条记录(100可以改变根据实际情况修改)
+
+tail -100f 日志文件|grep -100i 'error'：分组查询 i为不区分大小写 'error' 查询日志文件中所有带有error的关键字 100指的是打印出来和error相关的100行记录
+
+cat 日志文件|grep -100i 'error' 基本和上面的差不多 只不过cat是从日志文件开始到结束进行检索匹配
+
+rz -be：上传文件到liunx命令
+
+sz：从liunx下载文件命令
+
+sh -x 文件：执行文件内容
+
+2：文件操作常用命令
+mkdir 文件夹名：创建文件夹
+
+rm -f：删除文件命令(比如 rm -f * 删除所有 rm -f fileName.txt 删除单个)
+
+rm -rf：删除目录
+
+tar czvf 压缩后文件.tar 原始文件：压缩单个文件
+
+tar czvf  压缩后文件.tar 原始文件1,原始文件2.....：压缩多个文件
+
+tar czvf 压缩后文件.tar 目录：单个目录压缩
+
+tar czvf 压缩后文件.tar 目录1,目录2......：多个目录压缩
+
+tar xzvf 压缩文件.tar 解压文件
+
+unzip 文件.zip：解压zip文件
+
+gunzip 文件.gz :解压gz文件 
+cp -r 文件名 备份目录：备份文件
+mv 原始文件 重命名后文件：文件重命名
+chmod +x：文件加上操作权限
+3：文本常用编辑命令
+vi：进入编辑界面
+
+i：编辑文件
+
+：q：退出
+
+：q！：强制退出
+
+：wq：保存后退出
+
+4：文本合并去重常见命令
+cat：读出文本内容
+
+uniq：去重命令
+
+sort：对文本进行排序
+
+实际应用
+
+cat file1.txt file2.txt > file3.txt 合并文件(一个在上一个在下) 
+
+paste  file1.txt file2.txt > file3.txt  合并文件(一个在左一个在由)
+
+sort file |uniq 重复的行只记录一个
+
+sort file |uniq -u  重复的行全部去掉
+
+5：磁盘相关命令
+请参考这篇文章(磁盘命令)
